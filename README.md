@@ -1,14 +1,22 @@
 # SpringRestfullStatelessStarter
 
 <p>A Spring Restfull (using JWT) &amp; Stateless starter [UP TO DATE]</p>
-Based from 
-- (https://medium.com/@tericcabrel/implement-jwt/...)[https://medium.com/@tericcabrel/implement-jwt-authentication-in-a-spring-boot-3-application-5839e4fd8fac]
-- (GitHub Repository)[https://github.com/tericcabrel/blog-tutorials/tree/main/springboot-jwt-auth]
+Based from
+<ul>
+<li>
+https://medium.com/@tericcabrel/implement-jwt-authentication-in-a-spring-boot-3-application-5839e4fd8fac
+</li>
+<li>
+https://github.com/tericcabrel/blog-tutorials/tree/main/springboot-jwt-auth
+</li>
+</ul>
 
 # How to run ?
-
-- Have JDK 22
-- (MySQL)
+Recommended
+- MySQL Server 8.2
+Required
+- JDK 22
+- MySQL Server (for other, edit build.gradle.kts)
 
 <p>This project is using Gradle Kotlin, please see `build.gradle.kts`</p>
 
