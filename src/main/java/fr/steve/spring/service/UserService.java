@@ -27,6 +27,7 @@ public class UserService {
     public UserResponse genereUserResponse(User user) {
         UserResponse userResponse = new UserResponse();
         userResponse.setEmail(user.getEmail());
+        userResponse.setUsername(user.getUsername());
         userResponse.setFullName(user.getFullName());
         userResponse.setEnabled(user.isEnabled());
         userResponse.setCreatedAt(user.getCreatedAt());
