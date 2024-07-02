@@ -37,10 +37,24 @@ Custom with your values:
 ```shell
 node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
 ```
-(Source)[https://dev.to/tkirwa/generate-a-random-jwt-secret-key-39j4]
+Source: https://dev.to/tkirwa/generate-a-random-jwt-secret-key-39j4
 
 ## Run the project
 
 ```shell
 gradlew bootRun
 ```
+
+## And after run?
+
+By default, users have (in fr.steve.spring.service/AuthenticationService.java)
+- an activated account: user.setEnabled(true) ;
+- a non-expired account: user.setAccountNonExpired(true) ;
+- an account that is not locked: user.setAccountNonLocked(true) ;
+- an account with an unexpired password: user.setCredentialsNonExpired(true) ;
+
+You need to manage this information by creating services
+- to disable the user when it is created and enable it when the account is confirmed.
+- to set the account to expire at a given time (useful for demo accounts or accounts deleted before being archived)
+- to define a locked account at a given time
+- to say that the password has expired at a certain time (it is advisable to change your password regularly...)
